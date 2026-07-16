@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import java.math.BigDecimal;
 
 @Entity
@@ -17,9 +19,12 @@ public class Produto {
     private int quantidade;
     private BigDecimal precoCompra;
     private BigDecimal precoVenda;
-    private String fornecedor;
     private String status;
 
+    @ManyToMany
+    @JoinColumn(name="fornecedor_id")
+    private Fornecedor fornecedor;
+    
     public int getId() {
         return id;
     }
@@ -66,14 +71,6 @@ public class Produto {
 
     public void setPrecoVenda(BigDecimal precoVenda) {
         this.precoVenda = precoVenda;
-    }
-
-    public String getFornecedor() {
-        return fornecedor;
-    }
-
-    public void setFornecedor(String fornecedor) {
-        this.fornecedor = fornecedor;
     }
 
     public String getStatus() {
