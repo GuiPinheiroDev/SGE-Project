@@ -25,6 +25,14 @@ public class Produto {
     @JoinColumn(name="fornecedor_id")
     private Fornecedor fornecedor;
     
+    public Fornecedor getNivelAcesso() {
+        return fornecedor;
+    }
+
+    public void setNivelAcesso(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+    
     public int getId() {
         return id;
     }
