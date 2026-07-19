@@ -130,7 +130,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        // TODO add your handling code here:
+        ProdutoView pv = new ProdutoView();
+        pv.setVisible(true);
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
