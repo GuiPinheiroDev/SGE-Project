@@ -77,6 +77,8 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnSair.setText("Sair");
         btnSair.setBorder(null);
         btnSair.setBorderPainted(false);
+        btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSair.addActionListener(this::btnSairActionPerformed);
 
         jPanel2.setBackground(new java.awt.Color(29, 53, 87));
 
@@ -109,6 +111,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnConcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnConcluir.setText("Concluir");
         btnConcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConcluir.addActionListener(this::btnConcluirActionPerformed);
 
         jLabel12.setText("Id do produto que será editado: ");
 
@@ -229,6 +232,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnProduto.setBorderPainted(false);
         btnProduto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProduto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnProduto.addActionListener(this::btnProdutoActionPerformed);
 
         btnEntrada.setBackground(new java.awt.Color(29, 53, 87));
         btnEntrada.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -238,6 +242,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnEntrada.setBorderPainted(false);
         btnEntrada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntrada.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnEntrada.addActionListener(this::btnEntradaActionPerformed);
 
         btnSaida.setBackground(new java.awt.Color(29, 53, 87));
         btnSaida.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -247,6 +252,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnSaida.setBorderPainted(false);
         btnSaida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSaida.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSaida.addActionListener(this::btnSaidaActionPerformed);
 
         btnControle.setBackground(new java.awt.Color(29, 53, 87));
         btnControle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -256,6 +262,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnControle.setBorderPainted(false);
         btnControle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnControle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnControle.addActionListener(this::btnControleActionPerformed);
 
         btnCompras.setBackground(new java.awt.Color(29, 53, 87));
         btnCompras.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -265,6 +272,7 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
         btnCompras.setBorderPainted(false);
         btnCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCompras.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnCompras.addActionListener(this::btnComprasActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -340,6 +348,48 @@ public class ProdutoEdicaoView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        Main m = new Main();
+        m.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConcluirActionPerformed
+        ProdutoView pv = new ProdutoView();
+        pv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnConcluirActionPerformed
+
+    private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
+        ProdutoView pv = new ProdutoView();
+        pv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnProdutoActionPerformed
+
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+        EntradaView ev = new EntradaView();
+        ev.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnEntradaActionPerformed
+
+    private void btnSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaidaActionPerformed
+        SaidaView sv = new SaidaView();
+        sv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSaidaActionPerformed
+
+    private void btnControleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControleActionPerformed
+        ControleView cv = new ControleView();
+        cv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnControleActionPerformed
+
+    private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
+        ComprasView cv = new ComprasView();
+        cv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnComprasActionPerformed
 
     /**
      * @param args the command line arguments

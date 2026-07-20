@@ -63,6 +63,7 @@ public class ProdutoView extends javax.swing.JFrame {
         btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastrar.addActionListener(this::btnCadastrarActionPerformed);
 
         btnEditar.setBackground(new java.awt.Color(29, 53, 87));
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
@@ -74,6 +75,7 @@ public class ProdutoView extends javax.swing.JFrame {
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluir.setText("Excluir");
         btnExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExcluir.addActionListener(this::btnExcluirActionPerformed);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -114,73 +116,78 @@ public class ProdutoView extends javax.swing.JFrame {
         btnProduto.setBackground(new java.awt.Color(29, 53, 87));
         btnProduto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProduto.setForeground(new java.awt.Color(255, 255, 255));
-        btnProduto.setText("Produto");
+        btnProduto.setText("   Produto");
         btnProduto.setBorder(null);
         btnProduto.setBorderPainted(false);
         btnProduto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProduto.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnProduto.addActionListener(this::btnProdutoActionPerformed);
 
         btnEntrada.setBackground(new java.awt.Color(29, 53, 87));
         btnEntrada.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
-        btnEntrada.setText("Entrada");
+        btnEntrada.setText("   Entrada");
         btnEntrada.setBorder(null);
         btnEntrada.setBorderPainted(false);
         btnEntrada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntrada.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnEntrada.addActionListener(this::btnEntradaActionPerformed);
 
         btnSaida.setBackground(new java.awt.Color(29, 53, 87));
         btnSaida.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSaida.setForeground(new java.awt.Color(255, 255, 255));
-        btnSaida.setText("Saída");
+        btnSaida.setText("   Saída");
         btnSaida.setBorder(null);
         btnSaida.setBorderPainted(false);
         btnSaida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSaida.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnSaida.addActionListener(this::btnSaidaActionPerformed);
 
         btnControle.setBackground(new java.awt.Color(29, 53, 87));
         btnControle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnControle.setForeground(new java.awt.Color(255, 255, 255));
-        btnControle.setText("Controle");
+        btnControle.setText("   Controle");
         btnControle.setBorder(null);
         btnControle.setBorderPainted(false);
         btnControle.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnControle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnControle.addActionListener(this::btnControleActionPerformed);
 
         btnCompras.setBackground(new java.awt.Color(29, 53, 87));
         btnCompras.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCompras.setForeground(new java.awt.Color(255, 255, 255));
-        btnCompras.setText("Compras");
+        btnCompras.setText("   Compras");
         btnCompras.setBorder(null);
         btnCompras.setBorderPainted(false);
         btnCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCompras.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnCompras.addActionListener(this::btnComprasActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnControle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSaida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(0, 73, Short.MAX_VALUE))
-                    .addComponent(btnCompras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnControle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCompras, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(btnProduto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEntrada, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSaida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel5)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel5)
-                .addGap(53, 53, 53)
+                .addGap(48, 48, 48)
                 .addComponent(btnProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -211,6 +218,8 @@ public class ProdutoView extends javax.swing.JFrame {
         btnSair.setText("Sair");
         btnSair.setBorder(null);
         btnSair.setBorderPainted(false);
+        btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSair.addActionListener(this::btnSairActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,9 +233,9 @@ public class ProdutoView extends javax.swing.JFrame {
                 .addComponent(lblUsuario)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(31, 31, 31)
-                .addComponent(btnSair)
-                .addGap(38, 38, 38))
+                .addGap(18, 18, 18)
+                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,8 +267,56 @@ public class ProdutoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        ProdutoEdicaoView pev = new ProdutoEdicaoView();
+        pev.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        Main m = new Main();
+        m.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProdutoActionPerformed
+
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+        EntradaView ev = new EntradaView();
+        ev.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnEntradaActionPerformed
+
+    private void btnSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaidaActionPerformed
+        SaidaView sv = new SaidaView();
+        sv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnSaidaActionPerformed
+
+    private void btnControleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControleActionPerformed
+        ControleView cv = new ControleView();
+        cv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnControleActionPerformed
+
+    private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
+        ComprasView cv = new ComprasView();
+        cv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnComprasActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        ProdutoCadastrarView pcv = new ProdutoCadastrarView();
+        pcv.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        ProdutoExcluirView pev = new ProdutoExcluirView();
+        pev.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments

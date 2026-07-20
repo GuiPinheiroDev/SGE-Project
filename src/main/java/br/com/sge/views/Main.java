@@ -57,6 +57,7 @@ public class Main extends javax.swing.JFrame {
         txtSenha.addActionListener(this::txtSenhaActionPerformed);
 
         btnEntrar.setText("Entrar");
+        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntrar.addActionListener(this::btnEntrarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -132,6 +133,7 @@ public class Main extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         ProdutoView pv = new ProdutoView();
         pv.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
